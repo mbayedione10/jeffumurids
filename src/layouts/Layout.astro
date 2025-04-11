@@ -30,6 +30,12 @@ const { title = "Jëffu Murids yi - Ndogous Collectifs des Baye Fall" } = Astro.
         once: true,
       });
     </script>
+    <script>
+      window.addEventListener('load', () => {
+        // Force a re-layout of the page after it has loaded
+        document.documentElement.offsetHeight;
+      });
+    </script>
   </body>
 </html>
 
