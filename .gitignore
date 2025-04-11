@@ -6,6 +6,7 @@ dist/
 .bolt/
 .codesandbox/
 .vscode/
+.idx/
 
 # dependencies
 node_modules/
