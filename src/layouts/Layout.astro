@@ -4,24 +4,26 @@ import '@fontsource/poppins/500.css';
 import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import 'aos/dist/aos.css';
+import Header from '../components/Header.astro';
 
 interface Props {
   title?: string;
 }
 
-const { title = "Jëffu Murids yi - Ndogous Collectifs des Baye Fall" } = Astro.props;
+const { title = "Jëffu Murids yi - Ndogous des Baye Fall" } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body class="min-h-screen bg-gray-50 font-poppins">
+    <Header />
     <slot />
     <script>
       import AOS from 'aos';
@@ -36,5 +38,11 @@ const { title = "Jëffu Murids yi - Ndogous Collectifs des Baye Fall" } = Astro.
 <style is:global>
   html {
     scroll-behavior: smooth;
+  }
+
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
   }
 </style>
