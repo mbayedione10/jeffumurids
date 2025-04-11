@@ -1,4 +1,5 @@
 ---
+const currentYear = new Date().getFullYear();
 ---
 <footer class="bg-gray-900 text-white py-12">
   <div class="container mx-auto px-4">
@@ -29,8 +30,10 @@
       </div>
     </div>
     
-    <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-      <p>&copy; 2024 Jëffu Murids yi. Tous droits réservés.</p>
+    <div class="flex justify-between items-center gap-6 md:text-lg text-heading-3">
+                <div>
+                    &copy; {currentYear} <span id="year"></span> <a target="_blank" href="https://mbayedione.xyz/"> #NioulBoy. All right reserved</a>
+                </div>
     </div>
   </div>
 </footer>

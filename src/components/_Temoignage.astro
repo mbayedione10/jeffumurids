@@ -1,0 +1,29 @@
+---
+interface Props {
+  temoignages: { name: string; quote: string }[];
+}
+
+type TemoignageProps = {
+  name: string; 
+  quote: string
+};
+
+const { temoignages } = Astro.props as Props; 
+---
+
+<div class="mt-24" data-aos="fade-up">
+  <h3 class="text-3xl font-bold text-center text-primary mb-12">Témoignages</h3>
+  <div class="grid md:grid-cols-2 gap-8">
+    {temoignages.map((temoignage: { name: string; quote: string }) => {
+        return(
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <div class="flex items-start gap-4 mb-6">
+            <blockquote class="text-gray-700 text-lg leading-relaxed italic">
+              {temoignage.quote}
+              <footer class="mt-4 text-primary font-medium">- {temoignage.name}</footer>
+            </blockquote>
+          </div>
+        </div>
+        );
+    })
+  </div>+</div>
